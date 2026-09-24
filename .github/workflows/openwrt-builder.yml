@@ -11,7 +11,7 @@ env:
   DIY_P1_SH: 24.10/diy-part1.sh
   DIY_P2_SH: 24.10/diy-part2.sh
   DIY_DEVICE_SH: 24.10/diy-part-aigo-ags21.sh
-  DIY_P3_SH: diy-partX.sh
+  DIY_P3_SH: 24.10/diy-part3.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
