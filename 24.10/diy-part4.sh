@@ -82,7 +82,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/l
 # git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/custom/easytier
 # git clone --depth=1 https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/custom/tailscale-community
 
-# QuickStart & iStore 套件 ====================
+# QuickStart & iStore
 git clone --depth=1 https://github.com/kenzok8/small-package temp-small
 # 快速向导（核心与前端）
 cp -r temp-small/quickstart package/custom/quickstart
