@@ -1,7 +1,7 @@
 name: ags21
 
 env:
-  DEVICE_NAME: aigo-ags21
+  DEVICE_NAME: 24.10-aigo-ags21
   # REPO_URL: https://github.com/dailook/immortalwrt-mt798x-6.6
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
   # REPO_URL: https://github.com/Yuzhii0718/immortalwrt-mt798x-6.6-padavanonly
