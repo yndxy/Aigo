@@ -1,4 +1,4 @@
-name: 24.10-aigo-ags21
+name: ags21
 
 env:
   DEVICE_NAME: aigo-ags21
