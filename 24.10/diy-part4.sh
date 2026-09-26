@@ -14,7 +14,7 @@ mkdir -p package/custom
 
 # 科学插件
 # Passwall
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,dae,daed,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,dae,daed,mosdns,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 # git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/custom/passwall-packages
 # rm -rf feeds/luci/applications/luci-app-passwall
 # git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall.git package/custom/passwall
@@ -49,8 +49,8 @@ git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/custom/
 # git clone --depth=1 https://github.com/janvanstiphout/luci-app-accesscontrol.git package/custom/accesscontrol
 
 # 升级替换 mosdns
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
+# find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+# find ./ | grep Makefile | grep mosdns | xargs rm -f
 
 git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/custom/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/custom/v2ray-geodata
