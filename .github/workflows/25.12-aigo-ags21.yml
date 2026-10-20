@@ -1,4 +1,4 @@
-name: op-aigo-ags21
+name: 25.12-aigo-ags21
 
 on:
   workflow_dispatch:
