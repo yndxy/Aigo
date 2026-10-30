@@ -32,8 +32,9 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/
 # git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
 # Nikki / Momo
+# rm -rf feeds/packages/net/{sing-box}
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom/nikki
-# git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
 
 # SSR+
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
