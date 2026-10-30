@@ -32,9 +32,10 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/
 # git clone https://github.com/kenzok8/vmlinux-btf.git package/custom/vmlinux-btf
 
 # Nikki / Momo
-# rm -rf feeds/packages/net/{sing-box}
 # git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki.git package/custom/nikki
 git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-momo.git package/custom/momo
+# 删除momo自带sing-box，使用预置官方二进制
+rm -rf package/custom/momo/sing-box
 
 # SSR+
 # git clone --depth=1 https://github.com/fw876/helloworld.git package/custom/ssrp
@@ -100,3 +101,13 @@ git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config.git packag
 # git clone --depth=1 -b openwrt-25.12 https://github.com/sbwml/luci-theme-argon.git package/custom/luci-theme-argon
 # git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat.git package/custom/luci-theme-kucat
 # git clone --depth=1 https://github.com/sirpdboy/luci-app-kucat-config.git package/custom/luci-app-kucat-config
+
+# ========== 预置 sing-box 官方 arm64 静态二进制 ==========
+SING_VER="1.14.4"
+mkdir -p files/usr/bin
+wget -qO files/sing.tar.gz "https://github.com/SagerNet/sing-box/releases/download/v${SING_VER}/sing-box-${SING_VER}-linux-arm64.tar.gz"
+tar -zxf files/sing.tar.gz -C files/usr/bin/
+mv "files/usr/bin/sing-box-${SING_VER}-linux-arm64/sing-box" files/usr/bin/sing-box
+chmod +x files/usr/bin/sing-box
+rm -rf "files/usr/bin/sing-box-${SING_VER}-linux-arm64"
+rm -f files/sing.tar.gz
