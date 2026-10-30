@@ -8,7 +8,7 @@ env:
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: 24.10/ags21.config
-  DIY_P1_SH: 24.10/diy-part4.sh
+  DIY_P1_SH: 24.10/diy-part1.sh
   DIY_P2_SH: 24.10/diy-part2.sh
   DIY_DEVICE_SH: 24.10/diy-part-aigo-ags21.sh
   DIY_P3_SH: 24.10/diy-part3.sh
