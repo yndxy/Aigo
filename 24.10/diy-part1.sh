@@ -49,6 +49,15 @@ git clone --depth=1 https://github.com/kenzok8/openwrt-daede.git package/custom/
 # git clone --depth=1 https://github.com/destan19/OpenAppFilter.git package/custom/OpenAppFilter
 # git clone --depth=1 https://github.com/janvanstiphout/luci-app-accesscontrol.git package/custom/accesscontrol
 
+# Vantage LuCI theme + dashboard (replaces luci-theme-m3e)
+rm -rf package/luci-theme-vantage package/luci-app-vantage vantage-repo
+git clone --depth=1 --single-branch --filter=blob:none --sparse https://github.com/anothaDev/luci-theme-vantage vantage-repo
+pushd vantage-repo || exit 1
+git sparse-checkout set luci-theme-vantage luci-app-vantage
+popd
+mv -f vantage-repo/luci-theme-vantage vantage-repo/luci-app-vantage package/
+rm -rf vantage-repo
+
 # 升级替换 mosdns
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
@@ -60,26 +69,26 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/custom/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/custom/v2ray-geodata
 
 # QuickStart & iStore 套件 ====================
-git clone --depth=1 https://github.com/kenzok8/small-package temp-small
+# git clone --depth=1 https://github.com/kenzok8/small-package temp-small
 # 快速向导（核心与前端）
-cp -r temp-small/quickstart package/custom/quickstart
-cp -r temp-small/luci-app-quickstart package/custom/luci-app-quickstart
+# cp -r temp-small/quickstart package/custom/quickstart
+# cp -r temp-small/luci-app-quickstart package/custom/luci-app-quickstart
 # iStore 商店及组件
-cp -r temp-small/luci-app-store package/custom/luci-app-store
-cp -r temp-small/is-opkg package/custom/is-opkg
-cp -r temp-small/luci-lib-xterm package/custom/luci-lib-xterm
+# cp -r temp-small/luci-app-store package/custom/luci-app-store
+# cp -r temp-small/is-opkg package/custom/is-opkg
+# cp -r temp-small/luci-lib-xterm package/custom/luci-lib-xterm
 # 异步任务调度服务
-cp -r temp-small/taskd package/custom/taskd
-cp -r temp-small/luci-lib-taskd package/custom/luci-lib-taskd
+# cp -r temp-small/taskd package/custom/taskd
+# cp -r temp-small/luci-lib-taskd package/custom/luci-lib-taskd
 # 清理临时仓库
-rm -rf temp-small
+# rm -rf temp-small
 
 # VPN
 # git clone --depth=1 https://github.com/EasyTier/luci-app-easytier.git package/custom/easytier
 # git clone --depth=1 https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/custom/tailscale-community
 
 # AdGuardHome
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-adguardhome.git package/custom/luci-app-adguardhome
+git clone --depth=1 https://github.com/stevenjoezhang/luci-app-adguardhome.git package/luci-app-adguardhome
 
 # lucky
 git clone --depth=1 https://github.com/gdy666/luci-app-lucky.git package/custom/lucky
