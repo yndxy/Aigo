@@ -318,3 +318,7 @@ CONFIG_PACKAGE_vmlinux-btf=n
 # CONFIG_PACKAGE_kmod-usb-core=n
 # CONFIG_PACKAGE_kmod-usb-storage-extras=n
 # CONFIG_PACKAGE_kmod-usb-storage-uas=n
+#honk
+CONFIG_PACKAGE_coreutils-stat=y
+CONFIG_PACKAGE_sqlite3-cli=y
+CONFIG_BUSYBOX_CONFIG_STAT=y
