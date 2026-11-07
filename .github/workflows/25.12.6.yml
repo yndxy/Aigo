@@ -1,4 +1,4 @@
-name: openwrt-aigo-ags2w
+name: openwrt-aigo
 
 permissions:
   contents: write
